@@ -1,0 +1,29 @@
+class node
+    {
+    public:
+	// TYPEDEF
+	typedef double value_type;
+    
+	// CONSTRUCTOR
+	node(
+	    const value_type& init_data = value_type( ),
+	    node* init_link = NULL
+	)
+	{ data = init_data; link = init_link; }
+
+	// Member functions to set the data and link fields:
+    	void set_data(const value_type& new_data) { data = new_data; }
+    	void set_link(node* new_link)             { link = new_link; }
+
+	// Constant member function to retrieve the current data:
+	value_type data( ) const { return data; }
+
+	// Two slightly different member functions to retrieve
+	// the current link:
+	const node* link( ) const { return link; }
+    	node* link( )             { return link;}
+	
+    private:
+	value_type data;
+	node* link;
+    };
